@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Materialien - createdbynosca</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="profile profile-compact">
+            <a href="index.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Zurück
+            </a>
+            <div class="avatar-wrapper avatar-small">
+                <img src="images/avatar.svg" alt="createdbynosca" class="avatar">
+            </div>
+            <h1 class="username">Tools & Materialien</h1>
+            <p class="tagline">Meine Empfehlungen für euch</p>
+        </header>
+
+        <main class="links-affiliate">
+            <div id="affiliate-links" class="affiliate-grid">
+                <!-- Links werden per JavaScript geladen -->
+            </div>
+            
+            <div id="loading" class="loading">
+                <div class="loading-spinner"></div>
+                <p>Lade Empfehlungen...</p>
+            </div>
+            
+            <div id="error" class="error-message" style="display: none;">
+                <p>Fehler beim Laden der Links. Bitte später erneut versuchen.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 createdbynosca</p>
+            <p class="affiliate-disclaimer">* Affiliate-Links – bei einem Kauf erhalte ich eine kleine Provision</p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="sheets-loader.js"></script>
+</body>
+</html>
