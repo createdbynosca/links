@@ -358,21 +358,7 @@ body {
     color: #FCA5A5;
 }
 
-/* ================================
-   Footer
-   ================================ */
-.footer {
-    margin-top: auto;
-    padding-top: var(--spacing-xl);
-    text-align: center;
-    color: var(--color-text-muted);
-    font-size: 0.85rem;
-}
-
-.affiliate-disclaimer {
-    margin-top: var(--spacing-xs);
-    font-size: 0.75rem;
-}
+/* Footer styles moved to Footer with Legal Links section */
 
 /* ================================
    Responsive Adjustments
@@ -520,26 +506,68 @@ body {
 /* ================================
    Footer with Legal Links
    ================================ */
+.footer {
+    margin-top: auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+    padding-top: var(--spacing-xl);
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    background: #000000;
+    margin-left: calc(-1 * var(--spacing-md));
+    margin-right: calc(-1 * var(--spacing-md));
+    margin-bottom: calc(-1 * var(--spacing-lg));
+}
+
+@media (min-width: 768px) {
+    .footer {
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        margin-bottom: calc(-1 * var(--spacing-xl));
+        padding-left: var(--spacing-lg);
+        padding-right: var(--spacing-lg);
+    }
+}
+
+.links-main,
+.links-affiliate,
+.legal-content {
+    margin-bottom: var(--spacing-xl);
+}
+
 .footer-legal {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-sm);
+    gap: var(--spacing-sm) var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
 
 .footer-legal a {
-    color: var(--color-text-muted);
+    color: var(--color-text-primary);
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     transition: color var(--transition-fast);
 }
 
 .footer-legal a:hover {
-    color: var(--color-text-primary);
+    color: var(--color-accent-yellow);
 }
 
 .footer-legal span {
+    display: none;
+}
+
+.footer-copyright {
     color: var(--color-text-muted);
-    opacity: 0.5;
+    font-size: 0.8rem;
+}
+
+.affiliate-disclaimer {
+    margin-top: var(--spacing-xs);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
 }
