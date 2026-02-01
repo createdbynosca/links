@@ -111,6 +111,9 @@ class AffiliateLinksLoader {
                target="_blank" 
                rel="noopener sponsored" 
                class="affiliate-item"
+               data-umami-event="Affiliate Click"
+               data-umami-event-product="${this.escapeHtml(link.title)}"
+               data-umami-event-category="${this.escapeHtml(link.category)}"
                style="animation-delay: ${0.1 + (index * 0.05)}s">
                 <div class="affiliate-item-image">
                     <img src="${this.escapeHtml(link.image)}" 
